@@ -1,0 +1,305 @@
+:root{
+    --button-color: #0cc0df;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #313e4f;
+    background-image: url('../assets/bg.png');
+     /* Center the background image */
+     background-position: center;
+
+     /* Prevent the background image from repeating */
+     background-repeat: no-repeat;
+ 
+     /* Ensure the background image covers the entire viewport */
+     background-size: cover;
+ 
+     /* Keep the background fixed during scrolling */
+     background-attachment: fixed;
+     min-height: 100vh; /* Full height of the viewport */
+     margin: 0; /* Remove default margin */
+     overflow-y: scroll;
+}
+
+body ::-webkit-scrollbar{
+    display: none;
+}
+
+#unair{
+    width: 4rem;
+    height: auto;
+    padding-bottom: 0.8rem;
+}
+#telegram{
+    width: 4rem;
+    height: auto;
+    padding-bottom: 0.8rem;
+}
+#whatsapp{
+    width: 4rem;
+    height: auto;
+    padding-bottom: 0.8rem;
+}
+#instagram{
+    width: 4rem;
+    height: auto;
+    padding-bottom: 0.8rem;
+}
+
+#jatim{
+    width: 9rem;
+    height: auto;
+}
+
+#unair2{
+    width: 5rem;
+    height: auto;
+    padding-bottom: 0.9rem;
+}
+
+#jatim2{
+    width: 12rem;
+    height: auto;
+}
+
+nav{
+    height: 5rem;
+}
+
+.hero{
+    min-height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .navbar-title h1{
+    color: #313e4f;
+    text-shadow: 0 0.06rem 0.1rem rgb(255, 255, 255);
+    font-weight: 900;
+    font-style: italic;
+}
+
+.container {
+    max-width: 100vh;
+    height: fit-content;
+    margin: 4rem auto;
+    padding: 20px;
+    background: #313e4f;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(203, 200, 200);
+}
+
+h1 {
+    text-align: center;
+    color: #ffff;
+    text-shadow: 0 0.2rem 0.2rem var(--button-color);
+}
+
+input {
+    width: 95vh;
+    padding: 6px ;
+    margin: 10px 2px;
+    border-radius: 0.5rem;  
+}
+
+button {
+    padding: 10px;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.1rem 0.2rem rgb(0, 0, 0);
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.clear-button:hover{
+    background-color: #313e4f;
+    color: white;
+    padding: 0.2rem 0.3rem;
+}
+
+#totalResults{
+    display: none;
+}
+
+#download{
+    display: none;
+}
+
+#reset{
+    display: none;
+}
+
+#clear{
+    display: none;
+}
+
+.button-container .resett{
+    margin-left: auto;
+}
+
+.button-container {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    gap: 10px; /* Jarak antara tombol */
+    margin-bottom: 20px; /* Jarak bawah untuk tombol */
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+}
+
+.clear-button {
+    position: absolute;
+    right: 10px;
+    top: 23%;
+    border: none;
+    transform: translateY(-50%);
+    background: none;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+#loadingMessage {
+    display: none; /* Sembunyikan pesan secara default */
+    position: fixed; /* Posisi tetap di layar */
+    top: 50%; /* Pusatkan secara vertikal */
+    left: 50%; /* Pusatkan secara horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan dengan transformasi */
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
+    color: white; /* Warna teks */
+    padding: 20px; /* Padding di dalam pesan */
+    border-radius: 5px; /* Sudut membulat */
+    z-index: 1000; /* Pastikan di atas elemen lain */
+    animation: fadeIn 0.5s; /* Animasi muncul */
+}
+
+/* Animasi fade in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Business JS */
+
+.business {
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white; 
+    border-radius: 1rem;
+}
+
+.business p {
+    margin: 10px 0;
+}
+  
+
+/* Footer */
+
+footer {
+    background-color: #313e4f; /* Light gray background */
+    padding: 10px; /* Add padding */
+    width: 100%; /* Full width */
+    position: relative; /* Position relative for any absolute children */
+    bottom: 0; /* Stick to the bottom */
+}
+
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+}
+
+.footer-kanan {
+    text-align: center;
+    margin: 2rem;
+}
+.footer-kanan p {
+    margin-bottom: 1rem;
+    color: #ffff;
+}
+
+.footer-kanan img {
+    transition: background-color 0.3s ease; /* Transisi halus untuk perubahan latar belakang */
+    padding: 10px; /* Menambahkan padding untuk area klik */
+    border-radius: 5px; /* Sudut melengkung untuk gambar */
+}
+
+.footer-kanan img:hover {
+    background-color: #e0e0e0; /* Warna latar belakang saat hover */
+}
+
+.footer-kiri p{
+    color: #ffffff;
+}
+
+
+/* Layar Tablet */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+   
+    .container{
+        width: 75vh;
+        margin-top: 2rem;
+    }
+    .input-container{
+        width: 68vh;
+    }
+    input{
+        width: 68vh;
+    }
+
+   
+}
+/* Layar Mobile */
+
+@media (max-width: 768px) {
+
+    .container{
+        width: 50vh;
+        margin-top: 2rem;
+    }
+    .input-container{
+        width: 44vh;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    input{
+        width: 44vh;
+    }
+
+    
+}
