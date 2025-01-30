@@ -1,13 +1,10 @@
 {
   "version": 2,
-  "functions": {
-    "back-end/scraper.js": {
-      "runtime": "nodejs18.x",
-      "maxDuration": 10,
-      "memory": 3008
-    }
-  },
   "builds": [
+    {
+      "src": "back-end/scraper.js",
+      "use": "@vercel/node"
+    },
     {
       "src": "back-end/server.js",
       "use": "@vercel/node"
@@ -15,9 +12,12 @@
   ],
   "routes": [
     {
+      "src": "back-end/scraper",
+      "dest": "back-end/scraper.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "back-end/server.js"
     }
   ]
-  
 }
