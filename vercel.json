@@ -1,5 +1,12 @@
 {
   "version": 2,
+  "functions": {
+    "back-end/scraper.js": {
+      "runtime": "nodejs18.x",
+      "maxDuration": 10,
+      "memory": 3008
+    }
+  },
   "builds": [
     {
       "src": "back-end/server.js",
@@ -12,4 +19,5 @@
       "dest": "back-end/server.js"
     }
   ]
+  
 }
