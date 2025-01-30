@@ -81,7 +81,6 @@ async function scrapeBusinessData(searchFor, total) {
     
     const browser = await puppeteer.launch({
         args: [...chromium.args, '--no-sandbox', '--disable-setuid-sandbox'],
-        executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
         headless: true
     });
     
