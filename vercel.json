@@ -4,10 +4,6 @@
     {
       "src": "back-end/scraper.js",
       "use": "@vercel/node"
-      "config": {
-        "maxDuration": 10,
-        "memory": 3008
-      }
     },
     {
       "src": "back-end/server.js",
@@ -16,7 +12,7 @@
   ],
   "routes": [
     {
-      "src": "back-end/scraper",
+      "src": "/api/scraper",
       "dest": "back-end/scraper.js"
     },
     {
