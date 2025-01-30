@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer'; 
+import chromium from '@sparticuz/chromium'; 
 import fs from 'fs';
 import path from 'path';
 import XLSX from 'xlsx'; // Ensure you have xlsx installed
